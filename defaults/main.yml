@@ -14,6 +14,9 @@ ferm_enabled: '{{ True
 # iptables.
 ferm_flush: '{{ ferm_enabled | bool }}'
 
+# Configure sysctl with ferm settings
+ferm_sysctl_enabled: '{{ ferm_enabled | bool }}'
+
 # List of packages to install
 ferm_packages: [ 'ferm', 'patch' ]
 

@@ -146,6 +146,7 @@
     owner: 'root'
     group: 'root'
     mode: '0644'
+  when: ferm_sysctl_enabled | bool
   register: ferm_register_sysctl
   tags: [ 'role::ferm:rules' ]
 
